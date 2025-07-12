@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    font-family: monospace;
+}
+
+canvas {
+    display: block;
+}
+
+#palabraInput, #colorInput {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px;
+    font-size: 18px;
+    background: #000;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+#palabraInput::placeholder {
+    color: #00ff00;
+    opacity: 0.7;
+}
+
+#palabraInput:focus {
+    border-color: #0f0;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+}
+
+#colorInput {
+    left: calc(50% + 180px);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.controls {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilo moderno para el control de tamaño */
+#sizeInput {
+    width: 150px;
+    cursor: pointer;
+}
+
+
+/* Ajuste para móviles */
+@media (max-width: 600px) {
+    .controls {
+        flex-direction: column;
+        align-items: center;
+        top: 30px;
+    }
+
+    #palabraInput {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    #colorInput {
+        width: 40px;
+        height: 40px;
+    }
+}
